@@ -4,12 +4,37 @@ import java.sql.DriverAction;
 import java.text.Format;
 import javax.swing.*;
 
+import org.w3c.dom.Text;
+
 public class MainFrame {
 JLabel dayLabel,hrLabel,minLabel,secLabel;
+Font font=new Font("Algerian", Font.PLAIN, 65);
 
 
+    public MainFrame() {
 
-    public static void main(String[] args) {
+
+    dayLabel=new JLabel("00");
+    dayLabel.setBounds(75,167,80,80);
+    dayLabel.setFont(font);
+    dayLabel.setForeground(Color.WHITE);
+ 
+    hrLabel=new JLabel("00");
+    hrLabel.setBounds(75+225,167,80,80);
+    hrLabel.setFont(font);
+    hrLabel.setForeground(Color.WHITE);
+ 
+    minLabel=new JLabel("00");
+    minLabel.setBounds(75+225+225,167,80,80);
+    minLabel.setFont(font);
+    minLabel.setForeground(Color.WHITE);
+ 
+    secLabel=new JLabel("00");
+    secLabel.setBounds(75+225+225+225,167,80,80);
+    secLabel.setFont(font);
+    secLabel.setForeground(Color.WHITE);
+ 
+    
 
     JLabel bgLabel= new JLabel();
     bgLabel.setIcon(new ImageIcon("bg1.png"));
@@ -25,7 +50,12 @@ JLabel dayLabel,hrLabel,minLabel,secLabel;
     ImageIcon image1 =new ImageIcon("Bangladesh_railway_logo.png");
 
     frame.setIconImage(image1.getImage());
+    frame.add(dayLabel);
+    frame.add(hrLabel);
+    frame.add(minLabel);
+    frame.add(secLabel);
     frame.add(bgLabel);
+
 
     Toolkit tk=Toolkit.getDefaultToolkit();
     int x=(int) tk.getScreenSize().getWidth();
@@ -35,6 +65,11 @@ JLabel dayLabel,hrLabel,minLabel,secLabel;
 
     frame.getContentPane().setBackground(new Color( 0x292929));
     frame.setVisible(true);
+    }
+
+
+    public static void main(String[] args) {
+        new MainFrame();
     }
     
 }
