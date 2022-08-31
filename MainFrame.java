@@ -8,10 +8,22 @@ import org.w3c.dom.Text;
 
 public class MainFrame {
 JLabel dayLabel,hrLabel,minLabel,secLabel;
+JButton startButton,pauseButton,resetbButton;
 Font font=new Font("Algerian", Font.PLAIN, 65);
 
 
     public MainFrame() {
+
+    startButton=new JButton("Start");
+    startButton.setBounds(260,400,80,40);
+    startButton.setFocusable(false);
+    // startButton.addActionListener(this);
+    startButton.setForeground(new Color(0xFFFFFF));
+    startButton.setBackground(new Color(0x292929));
+    startButton.setIcon(new ImageIcon("icons2.png"));
+    startButton.setHorizontalTextPosition(JButton.CENTER);
+    startButton.setVerticalTextPosition(JButton.BOTTOM);
+    startButton.createImage(80, 80);
 
 
     dayLabel=new JLabel("00");
@@ -54,6 +66,7 @@ Font font=new Font("Algerian", Font.PLAIN, 65);
     frame.add(hrLabel);
     frame.add(minLabel);
     frame.add(secLabel);
+    frame.add(startButton);
     frame.add(bgLabel);
 
 
