@@ -15,7 +15,7 @@ Font font=new Font("Algerian", Font.PLAIN, 65);
     public MainFrame() {
 
     startButton=new JButton("Start");
-    startButton.setBounds(260,400,80,40);
+    startButton.setBounds(650,400,80,40);
     startButton.setFocusable(false);
     // startButton.addActionListener(this);
     startButton.setForeground(new Color(0xFFFFFF));
@@ -24,6 +24,30 @@ Font font=new Font("Algerian", Font.PLAIN, 65);
     startButton.setHorizontalTextPosition(JButton.CENTER);
     startButton.setVerticalTextPosition(JButton.BOTTOM);
     startButton.createImage(80, 80);
+
+
+    pauseButton=new JButton("Pause");
+    pauseButton.setBounds(450,400,80,40);
+    pauseButton.setFocusable(false);
+    // pauseButton.addActionListener(this);
+    pauseButton.setForeground(new Color(0xFFFFFF));
+    pauseButton.setBackground(new Color(0x292929));
+    pauseButton.setIcon(new ImageIcon("icons2.png"));
+    pauseButton.setHorizontalTextPosition(JButton.CENTER);
+    pauseButton.setVerticalTextPosition(JButton.BOTTOM);
+    pauseButton.createImage(80, 80);
+
+
+    resetbButton=new JButton("Reset");
+    resetbButton.setBounds(250,400,80,40);
+    resetbButton.setFocusable(false);
+    // resetbButton.addActionListener(this);
+    resetbButton.setForeground(new Color(0xFFFFFF));
+    resetbButton.setBackground(new Color(0x292929));
+    resetbButton.setIcon(new ImageIcon("icons2.png"));
+    resetbButton.setHorizontalTextPosition(JButton.CENTER);
+    resetbButton.setVerticalTextPosition(JButton.BOTTOM);
+    resetbButton.createImage(80, 80);
 
 
     dayLabel=new JLabel("00");
@@ -67,6 +91,8 @@ Font font=new Font("Algerian", Font.PLAIN, 65);
     frame.add(minLabel);
     frame.add(secLabel);
     frame.add(startButton);
+    frame.add(pauseButton);
+    frame.add(resetbButton);
     frame.add(bgLabel);
 
 
